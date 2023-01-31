@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="normalize.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="./script.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container mb-5 mt-5">
+  <form class="student-database">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="form-fullname">
+        ФИО студента
+      </label>
+      <div class="col-sm-10">
+        <input class="form-control" id="form-fullname" name="form-fullname" type="text" placeholder="ФИО студента">
+      </div>
+    </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="form-faculty">
+          Факультет
+        </label>
+        <div class="col-sm-10">
+          <input class="form-control" id="form-faculty" name="form-faculty" type="text" placeholder="Факультет">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="form-birthdate">
+          Дата рождения
+        </label>
+        <div class="col-sm-10">
+          <input class="form-control" id="form-birthdate" name="form-birthdate" type="date" placeholder="Дата рождения">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="form-startdate">
+          Год начала обучения
+        </label>
+        <div class="col-sm-10">
+          <input class="form-control" id="form-startdate" name="form-startdate" type="number" placeholder="Год начала обучения" min="2000">
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Добавить студента</button>
+  </form>
+  <div class="container mb-5 mt-5">
+    <form class="filter-form">
+      <div class="form-row align-items-center">
+        <div class="col-auto">
+          <label>Найти по ФИО
+            <input type="text" class="filter-input filter-name form-control">
+          </label>
+        </div>
+        <div class="col-auto">
+          <label>Найти по факультету
+            <input type="text" class="filter-input filter-faculty form-control">
+          </label>
+        </div>
+        <div class="col-auto">
+          <label>Найти по году начала учебы
+            <input type="number" class="filter-input filter-start form-control">
+          </label>
+        </div>
+        <div class="col-auto">
+          <label>Найти по году окончания учебы
+            <input type="number" class="filter-input filter-finish form-control">
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- table here with all the info about the studentss -->
+  <div class="table-container container mb-5 mt-5">
+    <table class="table students-table">
+      <thead>
+        <tr>
+          <th scope="col" class="full-name-th">ФИО</th>
+          <th scope="col" class="faculty-th">Факультет</th>
+          <th scope="col" class="birthday-th">Дата рождения и возраст</th>
+          <th scope="col" class="study-years-th">Годы обучения и номер курса</th>
+        </tr>
+      </thead>
+      <tbody class="students-table_body">
+
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>
