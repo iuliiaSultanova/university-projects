@@ -1,0 +1,28 @@
+.hero {
+  padding-bottom: var(--section-pb);
+
+  &__content {
+    padding-top: 145px;
+    grid-column: 6 span;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--text-black);
+    font-size: 40px;
+    line-height: 100%;
+
+    span {
+      color: var(--deep-green);
+    }
+  }
+
+  &__text {
+    color: var(--text-gray);
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+}

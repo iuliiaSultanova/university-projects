@@ -1,10 +1,42 @@
 .container {
+  max-width: 1140px;
   margin: 0 auto;
-  //padding: 0 var(--container-offset);
+  padding: 0 15px;
 }
 
 .list-reset {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  outline: none;
+  color: var(--text-black);
+  padding: 20px 60px;
+}
+
+.btn--green {
+  outline: 1px solid var(--deep-green);
+  color: var(--deep-green);
+}
+
+.secondary-title {
+  color: var(--text-black);
+  font-size: 40px;
+  line-height: 110%;
 }

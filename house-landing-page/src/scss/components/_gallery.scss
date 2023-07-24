@@ -1,0 +1,26 @@
+.gallery {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &-tabs {
+    display: flex;
+
+    &__item:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &-tabs__btn {
+    padding: 10px 20px;
+    background-color: var(--main-green);
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--text-black);
+  }
+}

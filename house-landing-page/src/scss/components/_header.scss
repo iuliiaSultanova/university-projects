@@ -1,1 +1,26 @@
+.header {
+  padding: 31px 0;
+  background-color: var(--main-green);
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: var(--text-black);
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__el:not(:last-child) {
+    margin-right: var(--margin-list);
+  }
+}
