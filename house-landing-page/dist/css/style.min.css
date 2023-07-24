@@ -8,26 +8,28 @@ html {
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: "Raleway Regular";
+  src: url("./files/fonts/RalewayRegular.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
 :root {
   --font-family: "Raleway Regular", sans-serif;
   --main-green: #E1EDE6;
   --deep-green: #598D66;
   --text-black: #2C2D35;
   --text-gray: #86928B;
+  --container-offset: 165px;
 }
 
-@font-face {
-  font-family: "Raleway Regular";
-  src: url("../fonts/RalewayRegular.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-.u-center-text {
-  text-align: center;
+.container {
+  margin: 0 auto;
 }
 
-.test {
-  font-family: var(--font-family);
-  background-color: var(--deep-green);
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
