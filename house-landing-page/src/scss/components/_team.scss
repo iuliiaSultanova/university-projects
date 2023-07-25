@@ -1,0 +1,37 @@
+.team {
+  padding-top: var(--section-pb);
+  padding-bottom: var(--section-pb);
+
+  &__title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 110%;
+    color: var(--text-black);
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 500;
+    color: var(--text-black);
+  }
+
+  &__img {
+    grid-column: span 5;
+  }
+
+  &__content {
+    padding-top: 120px;
+    grid-column: span 7;
+  }
+
+  &__members {
+    display: flex;
+    align-items: center;
+  }
+
+  &__member:not(:last-child) {
+    margin-right: 30px;
+  }
+}

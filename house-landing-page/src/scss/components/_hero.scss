@@ -1,6 +1,10 @@
 .hero {
   padding-bottom: var(--section-pb);
 
+  &__img {
+    grid-column: 6 span;
+  }
+
   &__content {
     padding-top: 145px;
     grid-column: 6 span;

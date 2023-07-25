@@ -28,11 +28,19 @@
   outline: none;
   color: var(--text-black);
   padding: 20px 60px;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
 }
 
 .btn--green {
   outline: 1px solid var(--deep-green);
   color: var(--deep-green);
+}
+
+.btn--yellow {
+  background-color: var(--soft-yellow);
+  color: var(--text-balck);
 }
 
 .secondary-title {
