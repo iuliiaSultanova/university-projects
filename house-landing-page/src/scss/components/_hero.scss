@@ -1,13 +1,26 @@
 .hero {
   padding-bottom: var(--section-pb);
 
+  @include tablet {
+    padding-top: 42px;
+  }
+
   &__img {
     grid-column: 6 span;
+
+    @include tablet {
+      grid-column: 5 span;
+    }
   }
 
   &__content {
     padding-top: 145px;
     grid-column: 6 span;
+
+    @include tablet {
+      padding-top: 5px;
+      grid-column: 7 span;
+    }
   }
 
   &__title {

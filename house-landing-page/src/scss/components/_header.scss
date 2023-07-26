@@ -2,9 +2,56 @@
   padding: 31px 0;
   background-color: var(--main-green);
 
+  @include small-tablet {
+    padding: 16px 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      justify-content: space-evenly;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__left {
+    @include small-tablet {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__right {
+    @include small-tablet {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 15px;
+      border-top: 1px solid var(--text-gray);
+      /* width: 100%; */
+    }
+  }
+}
+
+.cart {
+  stroke: var(--text-black);
+  transition: stroke 0.3s ease-in-out;
+
+  &:focus svg {
+    outline: none;
+  }
+
+  &:focus-visible svg {
+    stroke: var(--main-green);
+  }
+
+  &:hover svg {
+    stroke: var(--deep-green);
   }
 }
 
@@ -12,15 +59,49 @@
   &__list {
     display: flex;
     align-items: center;
+
+    @include small-tablet {
+      width: 100%;
+    }
   }
 
   &__link {
     color: var(--text-black);
     font-size: 20px;
     line-height: 23px;
+    transition: color 0.3s ease-in-out;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      color: var(--text-black);
+    }
+
+    &:hover {
+      color: var(--deep-green);
+    }
+
+    &:active {
+      color: var(--deep-green);
+    }
+
+    &:visited {
+      color: var(--deep-green);
+    }
   }
 
   &__el:not(:last-child) {
     margin-right: var(--margin-list);
+
+    @include tablet {
+      margin-right: 60px;
+    }
   }
 }

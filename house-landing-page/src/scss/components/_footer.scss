@@ -7,17 +7,47 @@
     grid-column: span 3;
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      grid-column: span 12;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__center {
     grid-column: span 6;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      grid-column: span 9;
+    }
   }
 
   &__right {
     grid-column: span 3;
     justify-self: end;
+
+    @include tablet {
+      grid-column: span 3;
+    }
+  }
+
+  &__copyright {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 120%;
+    font-weight: 500;
+    color: var(--text-gray);
+    max-width: 115px;
   }
 
   &__contact {
@@ -26,6 +56,10 @@
     line-height: 23px;
     font-weight: 500;
     color: var(--text-black);
+
+    @include tablet {
+      padding-top: 0;
+    }
   }
 
   &__text {
@@ -41,6 +75,11 @@
     font-weight: 500;
     line-height: 150%;
     color: var(--text-gray);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--deep-green);
+    }
   }
 
   &__item:first-child {
@@ -55,8 +94,30 @@
   }
 
   &-socials__link {
+    display: inline-block;
     width: 24px;
     height: 24px;
+
+    svg {
+      fill: var(--text-black);
+    }
+
+    &:focus svg {
+      outline: none;
+    }
+
+    &:focus-visible svg {
+      outline: 1px solid var(--deep-green);
+      fill: var(--deep-green);
+    }
+
+    &:hover svg {
+      fill: var(--deep-green);
+    }
+
+    &:active svg {
+      fill: var(--dark-green);
+    }
   }
 
   &-socials__item:not(:last-child) {

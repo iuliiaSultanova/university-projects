@@ -19,16 +19,29 @@
 
   &__img {
     grid-column: span 5;
+
+    @include tablet {
+      grid-column: span 12;
+    }
   }
 
   &__content {
     padding-top: 120px;
     grid-column: span 7;
+
+    @include tablet {
+      grid-column: span 12;
+      padding-top: 40px;
+    }
   }
 
   &__members {
     display: flex;
     align-items: center;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__member:not(:last-child) {

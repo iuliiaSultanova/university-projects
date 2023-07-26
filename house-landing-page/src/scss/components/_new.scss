@@ -7,6 +7,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @include tablet {
+    background-image: url(../img/section-new_tab.jpg);
+  }
+
 
   &__title {
     max-width: 521px;
@@ -20,6 +24,10 @@
     background-position: left center;
     background-size: 80px 80px;
     background-repeat: no-repeat;
+
+    @include tablet {
+      font-size: 30px;
+    }
   }
 
   &__content {
