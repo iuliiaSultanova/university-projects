@@ -16,6 +16,10 @@
     &__item:not(:last-child) {
       margin-right: 32px;
     }
+
+    @include mobile {
+      overflow-x: auto;
+    }
   }
 
   &-tabs__btn {
@@ -61,6 +65,10 @@
     padding: 20px;
     background-color: var(--main-green);
 
+    @include small-tablet {
+      align-items: center;
+    }
+
     &__content{
       display: flex;
       flex-direction: column;
@@ -102,7 +110,7 @@
       color: var(--text-black);
     }
   }
-  
+
   &__btn {
     margin-top: auto;
     width: 100%;

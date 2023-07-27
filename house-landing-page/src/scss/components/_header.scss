@@ -25,7 +25,7 @@
     }
 
     @include mobile {
-      padding: 0 15px;
+      padding: 0;
     }
   }
 
@@ -37,6 +37,8 @@
   }
 
   &__right {
+    display: flex;
+
     @include small-tablet {
       width: 100%;
       display: flex;
@@ -46,9 +48,8 @@
     }
 
     @include mobile {
-      padding: 16px 0;
-      background-color: var(--deep-green);
-      justify-content: space-between;
+      padding: 16px 15px;
+      background-color: var(--main-green);
       border-top: none;
     }
   }
@@ -96,13 +97,13 @@
     align-items: center;
     margin-right: 60px;
 
+    @include small-tablet {
+      width: 100%;
+    }
+
     @include mobile {
       flex-direction: column;
       align-items: flex-start;
-    }
-
-    @include small-tablet {
-      width: 100%;
     }
   }
 
@@ -141,13 +142,13 @@
   &__el:not(:last-child) {
     margin-right: var(--margin-list);
 
+    @include tablet {
+      margin-right: 60px;
+    }
+
     @include mobile {
       margin-right: 0;
       margin-bottom: 30px;
-    }
-
-    @include tablet {
-      margin-right: 60px;
     }
   }
 }

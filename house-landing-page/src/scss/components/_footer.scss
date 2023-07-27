@@ -3,6 +3,13 @@
   padding-bottom: 23px;
   background-color: var(--main-green);
 
+  &__container {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   &__left {
     grid-column: span 3;
     display: flex;
@@ -13,6 +20,11 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+    }
+
+    @include mobile {
+      align-items: flex-start;
+      flex-direction: column;
     }
   }
 
@@ -30,6 +42,10 @@
     @include tablet {
       grid-column: span 9;
     }
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__right {
@@ -38,6 +54,14 @@
 
     @include tablet {
       grid-column: span 3;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 16px;
+      border-top: 1px solid var(--text-gray);
     }
   }
 
@@ -48,6 +72,11 @@
     font-weight: 500;
     color: var(--text-gray);
     max-width: 115px;
+
+    @include mobile {
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   &__contact {
@@ -59,6 +88,10 @@
 
     @include tablet {
       padding-top: 0;
+    }
+
+    @include mobile {
+      font-size: 16px;
     }
   }
 
@@ -80,6 +113,14 @@
     &:hover {
       color: var(--deep-green);
     }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__list:not(:last-child) {
+    margin-bottom: 20px;
   }
 
   &__item:first-child {
@@ -91,6 +132,10 @@
   &-socials {
     display: flex;
     align-items: center;
+
+    @include mobile {
+      justify-content: center;
+    }
   }
 
   &-socials__link {

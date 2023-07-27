@@ -6,6 +6,10 @@
   @include tablet {
     padding: 0 40px;
   }
+
+  @include mobile {
+    padding: 0 15px;
+  }
 }
 
 .list-reset {

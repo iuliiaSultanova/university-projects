@@ -43,4 +43,10 @@
     font-weight: 500;
     color: var(--text-white);
   }
+
+  &__btn {
+    @include mobile {
+      width: 100%;
+    }
+  }
 }

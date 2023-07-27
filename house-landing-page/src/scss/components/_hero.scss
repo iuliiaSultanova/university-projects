@@ -11,6 +11,10 @@
     @include tablet {
       grid-column: 5 span;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__content {
@@ -20,6 +24,10 @@
     @include tablet {
       padding-top: 5px;
       grid-column: 7 span;
+    }
+
+    @include mobile {
+      grid-column: 12 span;
     }
   }
 
@@ -41,5 +49,9 @@
     line-height: 150%;
     margin: 0;
     margin-bottom: 40px;
+  }
+
+  &__btn {
+    width: 100%;
   }
 }
