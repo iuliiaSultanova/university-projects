@@ -6,6 +6,10 @@
     padding: 16px 0;
   }
 
+  @include mobile {
+    background-color: #fff;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -19,21 +23,33 @@
       flex-direction: column;
       justify-content: center;
     }
+
+    @include mobile {
+      padding: 0 15px;
+    }
   }
 
   &__left {
     @include small-tablet {
       margin-bottom: 15px;
+      //background-color: #fff;
     }
   }
 
   &__right {
     @include small-tablet {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       padding-top: 15px;
       border-top: 1px solid var(--text-gray);
-      /* width: 100%; */
+    }
+
+    @include mobile {
+      padding: 16px 0;
+      background-color: var(--deep-green);
+      justify-content: space-between;
+      border-top: none;
     }
   }
 }
@@ -56,9 +72,34 @@
 }
 
 .nav {
+  @include mobile {
+    position: fixed;
+    left: 0;
+    top: 121px;
+    z-index: 1000;
+    oveflow-y: auto;
+    padding: 30px;
+    width: 60%;
+    max-width: 300px;
+    height: calc(100vh - 63px);
+    background-color: var(--main-green);
+    transform: translateX(-200%);
+    transition: transform 0.3s ease-in-out;
+
+    &--visible {
+      transform: none;
+    }
+  }
+
   &__list {
     display: flex;
     align-items: center;
+    margin-right: 60px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     @include small-tablet {
       width: 100%;
@@ -100,8 +141,69 @@
   &__el:not(:last-child) {
     margin-right: var(--margin-list);
 
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
     @include tablet {
       margin-right: 60px;
     }
+  }
+}
+
+.burger {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-black);
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-black);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--active .burger__line {
+    opacity: 0;
+  }
+
+  &--active::before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  &--active::after {
+    bottom: auto;
+    top: 50%;
+    transform: rotate(-45deg);
   }
 }
