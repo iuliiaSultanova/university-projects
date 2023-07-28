@@ -1,110 +1,114 @@
 <section class="gallery" id="gallery">
-  <div class="container">
+  <div class="container tabs-container">
     <div class="gallery__top">
-      <h2 class="gallery__title secondary-title">Reproductions</h2>
+      <h2 class="gallery__title secondary-title" id="tabs-title">Reproductions</h2>
       <ul class="list-reset gallery-tabs">
         <li class="gallery-tabs__item">
-          <button class="btn-reset gallery-tabs__btn">France</button>
+          <a id="tab-1" class="btn-reset gallery-tabs__btn" href="#france">France</a>
         </li>
         <li class="gallery-tabs__item">
-          <button class="btn-reset gallery-tabs__btn">Germany</button>
+          <a id="tab-2" class="btn-reset gallery-tabs__btn" href="#germany">Germany</a>
         </li>
         <li class="gallery-tabs__item">
-          <button class="btn-reset gallery-tabs__btn">England</button>
+          <a id="tab-3" class="btn-reset gallery-tabs__btn" href="#england">England</a>
         </li>
       </ul>
     </div>
-    <ul class="gallery__list grid list-reset">
-      <li class="gallery__item">
-        <picture>
-          <source srcset="../img/gallery_1_phone.jpg" media="(max-width: 480px)">
-          <source srcset="../img/gallery_1_small-tab.jpg" media="(max-width: 700px)">
-          <source srcset="../img/gallery_1_tab.jpg" media="(max-width: 768px)">
-          <img src="../img/gallery_1_pc.jpg" alt="A painting of an angel" class="gallery__item__img" loading="lazy">
-        </picture>
-        <div class="gallery__item__content">
-          <span class="gallery__item__author">Marcel Rousseau</span>
-          <h3 class="gallery__item__title">Cupid's hunt</h3>
-          <span class="gallery__item__descr">Canvas, oil (50x80)</span>
-          <span class="gallery__item__price">$160</span>
-          <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
-        </div>
-      </li>
-      <li class="gallery__item">
-        <picture>
-          <source srcset="../img/gallery_2_phone.jpg" media="(max-width: 480px)">
-          <source srcset="../img/gallery_2_small-tab.jpg" media="(max-width: 700px)">
-          <source srcset="../img/gallery_2_tab.jpg" media="(max-width: 768px)">
-          <img src="../img/gallery_2_pc.jpg" alt="A painting of a lady in a red coat" class="gallery__item__img" loading="lazy">
-        </picture>
-        <div class="gallery__item__content">
-          <span class="gallery__item__author">Henri Celine</span>
-          <h3 class="gallery__item__title">Lady with a dog</h3>
-          <span class="gallery__item__descr">Acrylic, paper (50x80)</span>
-          <span class="gallery__item__price">$180</span>
-          <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
-        </div>
-      </li>
-      <li class="gallery__item">
-        <picture>
-          <source srcset="../img/gallery_3_phone.jpg" media="(max-width: 480px)">
-          <source srcset="../img/gallery_3_small-tab.jpg" media="(max-width: 700px)">
-          <source srcset="../img/gallery_3_tab.jpg" media="(max-width: 768px)">
-          <img src="../img/gallery_3_pc.jpg" alt="A painting of a doctor performing procudere on patient's head" class="gallery__item__img" loading="lazy">
-        </picture>
-        <div class="gallery__item__content">
-          <span class="gallery__item__author">Francois Dupont</span>
-          <h3 class="gallery__item__title">Procedure</h3>
-          <span class="gallery__item__descr">Colour lithograph (40x60)</span>
-          <span class="gallery__item__price">$200</span>
-          <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
-        </div>
-      </li>
-      <li class="gallery__item">
-        <picture>
-          <source srcset="../img/gallery_4_phone.jpg" media="(max-width: 480px)">
-          <source srcset="../img/gallery_4_small-tab.jpg" media="(max-width: 700px)">
-          <source srcset="../img/gallery_4_tab.jpg" media="(max-width: 768px)">
-          <img src="../img/gallery_4_pc.jpg" alt="A painting of a lady in polka-dot dress sitting on a bench under a tree" class="gallery__item__img" loading="lazy">
-        </picture>
-        <div class="gallery__item__content">
-          <span class="gallery__item__author">Louis Detouche</span>
-          <h3 class="gallery__item__title">Rose</h3>
-          <span class="gallery__item__descr">Acrylic, paper (50x80)</span>
-          <span class="gallery__item__price">$130</span>
-          <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
-        </div>
-      </li>
-      <li class="gallery__item">
-        <picture>
-          <source srcset="../img/gallery_5_phone.jpg" media="(max-width: 480px)">
-          <source srcset="../img/gallery_5_small-tab.jpg" media="(max-width: 700px)">
-          <source srcset="../img/gallery_5_tab.jpg" media="(max-width: 768px)">
-          <img src="../img/gallery_5_pc.jpg" alt="A painting of two birds eating from a plate" class="gallery__item__img" loading="lazy">
-        </picture>
-        <div class="gallery__item__content">
-          <span class="gallery__item__author">Francois Dupont</span>
-          <h3 class="gallery__item__title">Birds' meal</h3>
-          <span class="gallery__item__descr">Colour lithograph (40x60)</span>
-          <span class="gallery__item__price">$210</span>
-          <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
-        </div>
-      </li>
-      <li class="gallery__item">
-        <picture>
-          <source srcset="../img/gallery_6_phone.jpg" media="(max-width: 480px)">
-          <source srcset="../img/gallery_6_small-tab.jpg" media="(max-width: 700px)">
-          <source srcset="../img/gallery_6_tab.jpg" media="(max-width: 768px)">
-          <img src="../img/gallery_6_pc.jpg" alt="An abstract painting of a beach" class="gallery__item__img" loading="lazy">
-        </picture>
-        <div class="gallery__item__content">
-          <span class="gallery__item__author">Pierre Morange</span>
-          <h3 class="gallery__item__title">Landscape with fish</h3>
-          <span class="gallery__item__descr">Colour lithograph (40x60)</span>
-          <span class="gallery__item__price">$210</span>
-          <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
-        </div>
-      </li>
-    </ul>
+    <div class="tabs__panels">
+      <div id="france" aria-labelledby="tab-1">
+        <ul class="gallery__list grid list-reset">
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_1_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_1_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_1_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_1_pc.jpg" alt="A painting of an angel" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Marcel Rousseau</span>
+              <h3 class="gallery__item__title">Cupid's hunt</h3>
+              <span class="gallery__item__descr">Canvas, oil (50x80)</span>
+              <span class="gallery__item__price">$160</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2_pc.jpg" alt="A painting of a lady in a red coat" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Henri Celine</span>
+              <h3 class="gallery__item__title">Lady with a dog</h3>
+              <span class="gallery__item__descr">Acrylic, paper (50x80)</span>
+              <span class="gallery__item__price">$180</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_3_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_3_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_3_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_3_pc.jpg" alt="A painting of a doctor performing procudere on patient's head" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Francois Dupont</span>
+              <h3 class="gallery__item__title">Procedure</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60)</span>
+              <span class="gallery__item__price">$200</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_4_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_4_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_4_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_4_pc.jpg" alt="A painting of a lady in polka-dot dress sitting on a bench under a tree" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Louis Detouche</span>
+              <h3 class="gallery__item__title">Rose</h3>
+              <span class="gallery__item__descr">Acrylic, paper (50x80)</span>
+              <span class="gallery__item__price">$130</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_5_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_5_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_5_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_5_pc.jpg" alt="A painting of two birds eating from a plate" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Francois Dupont</span>
+              <h3 class="gallery__item__title">Birds' meal</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60)</span>
+              <span class="gallery__item__price">$210</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_6_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_6_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_6_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_6_pc.jpg" alt="An abstract painting of a beach" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Pierre Morange</span>
+              <h3 class="gallery__item__title">Landscape with fish</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60)</span>
+              <span class="gallery__item__price">$210</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>

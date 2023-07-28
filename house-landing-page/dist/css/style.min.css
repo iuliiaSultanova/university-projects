@@ -401,8 +401,10 @@ body {
   margin: 0;
   margin-bottom: 40px;
 }
-.hero__btn {
-  width: 100%;
+@media (max-width: 576px) {
+  .hero__btn {
+    width: 100%;
+  }
 }
 
 .gallery {
