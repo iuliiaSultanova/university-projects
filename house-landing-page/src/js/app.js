@@ -17,93 +17,23 @@ navItems.forEach(el => {
   })
 });
 
-const tabsContainer = document.querySelector('.tabs-container');
-const tabsList = tabsContainer.querySelector('ul');
-const tabsButtons = tabsList.querySelectorAll('a');
-const tabPanels = querySelectorAll('.tabs__panels > div');
-tabsList.setAttribute('role', 'tablist');
-tabsList.querySelectorAll('li').forEach((listItem) => {
-  listItem.setAttribute('role', 'presentation');
+const tabs = document.querySelector('.gallery-tabs');
+const tabsBtn = document.querySelectorAll('.gallery-tabs__btn');
+const tabsContent = document.querySelectorAll('.tabs__content');
+console.log("tabs: ", tabs);
+
+
+tabs.addEventListener('click', (e) => {
+    console.log('clicked');
+    const tabsPath = e.target.dataset.tabsPath;
+    console.log(tabsPath);
+    tabsHandler(tabsPath);
 });
 
-tabsButtons.forEach((tab, index) => {
-  tab.setAttribute('role', 'tab');
-  if (index === 0) {
-    tab.setAttribute('aria-selected', 'true');
-  } else {
-    tab.setAttribute('tabindex', '-1');
-    tabPanels[index].setAttribute('hidden', '');
-  }
-});
+const tabsHandler = (path) => {
+  tabsBtn.forEach(el => {el.classList.remove('gallery-tabs__btn--active')});
+  document.querySelector(`[data-tabs-path="${path}"]`).classList.add('gallery-tabs__btn--active');
 
-tabPanels.forEach((panel) => {
-  panel.setAttribute('role', 'tabpanel');
-  panel.setAttribute('tabindex', '0');
-});
-
-tabsContainer.addEventListener('click', (e) => {
-  const clickedTab = e.target.closest('a');
-  if (!clickedTab) return;
-  e.preventDefault;
-
-  switchTab(clickedTab);
-});
-
-tabsContainer.addEventListener('keydown', (e) => {
-  switch (e.key) {
-    case "ArrowLeft":
-      moveLeft();
-      break;
-    case "ArrowRight":
-      moveRight();
-      break;
-    case "Home":
-      e.preventDefault();
-      switchTab(tabsButtons[0]);
-      break;
-    case "End":
-      e.preventDefault();
-      switchTab(tabsButtons[tabsButtons.length - 1]);
-      break;
-  }
-});
-
-
-function moveLeft() {
-  const currentTab = document.activeElement;
-  if (!currentTab.parentElement.previousElementSibling) {
-    switchTab(tabsButtons[tabsButtons.length - 1]);
-  } else {
-    switchTab(currentTab.parentElement.previousElementSibling.querySelector("a"));
-  }
-}
-
-function moveRight() {
-  const currentTab = document.activeElement;
-  if (!currentTab.parentElement.previousElementSibling) {
-    switchTab(tabsButtons[0]);
-  } else {
-    switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
-  }
-}
-
-
-function switchTab(newTab) {
-  const activePanelId = newTab.getAttribute('href');
-  const activePanel = tabsContainer.querySelector(activePanelId);
-
-  tabsButtons.forEach((button) => {
-    button.setAttribute('aria-selected', false);
-    button.setAttribute('tabindex', '-1');
-  });
-
-  tabPanels.forEach((panel) => {
-    panel.setAttribute('hidden', true);
-  });
-
-  activePanel.removeAttribute('hidden', false);
-
-  newTab.setAttribute('aria-selected', true);
-  newTab.setAttribute('tabindex', 0);
-  newTab.focus();
-}
+  tabsContent.forEach(el => {el.classList.remove('tabs__content--active')});
+  document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+};

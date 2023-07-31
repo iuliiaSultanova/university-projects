@@ -453,6 +453,12 @@ body {
   background-color: var(--dark-green);
   color: var(--text-white);
 }
+.gallery-tabs__btn--active {
+  background-color: var(--dark-green);
+  color: var(--text-white);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  pointer-events: none;
+}
 .gallery__list {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
@@ -507,6 +513,14 @@ body {
 .gallery__btn {
   margin-top: auto;
   width: 100%;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
 }
 
 .new {

@@ -1,22 +1,21 @@
 <section class="gallery" id="gallery">
   <div class="container tabs-container">
     <div class="gallery__top">
-      <h2 class="gallery__title secondary-title" id="tabs-title">Reproductions</h2>
+      <h2 class="gallery__title secondary-title">Reproductions</h2>
       <ul class="list-reset gallery-tabs">
         <li class="gallery-tabs__item">
-          <a id="tab-1" class="btn-reset gallery-tabs__btn" href="#france">France</a>
+          <a id="tab-1" class="btn-reset gallery-tabs__btn gallery-tabs__btn--active" data-tabs-path="france">France</a>
         </li>
         <li class="gallery-tabs__item">
-          <a id="tab-2" class="btn-reset gallery-tabs__btn" href="#germany">Germany</a>
+          <a id="tab-2" class="btn-reset gallery-tabs__btn" data-tabs-path="germany">Germany</a>
         </li>
         <li class="gallery-tabs__item">
-          <a id="tab-3" class="btn-reset gallery-tabs__btn" href="#england">England</a>
+          <a id="tab-3" class="btn-reset gallery-tabs__btn" data-tabs-path="england">England</a>
         </li>
       </ul>
     </div>
-    <div class="tabs__panels">
-      <div id="france" aria-labelledby="tab-1">
-        <ul class="gallery__list grid list-reset">
+    <div class="tabs__content tabs__content--active" data-tabs-target="france">
+      <ul class="gallery__list grid list-reset">
           <li class="gallery__item">
             <picture>
               <source srcset="../img/gallery_1_phone.jpg" media="(max-width: 480px)">
@@ -107,8 +106,195 @@
               <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
             </div>
           </li>
-        </ul>
-      </div>
+      </ul>
+    </div>
+    <div class="tabs__content" data-tabs-target="germany">
+      <ul class="gallery__list grid list-reset">
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-1_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-1_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-1_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-1_pc.jpg" alt="A painting of a lady in a green coat" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Kurt Werner</span>
+              <h3 class="gallery__item__title">Above the city</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60) </span>
+              <span class="gallery__item__price">$170</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-2_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-2_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-2_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-2_pc.jpg" alt="A painting of chicks" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Max Richter</span>
+              <h3 class="gallery__item__title">The chicks</h3>
+              <span class="gallery__item__descr">Canvas, oil (50x80) </span>
+              <span class="gallery__item__price">$180</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-3_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-3_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-3_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-3_pc.jpg" alt="A painting of a huge bird with black feathers" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Martin Mayer</span>
+              <h3 class="gallery__item__title">Among the leaves</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60)</span>
+              <span class="gallery__item__price">$200</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-4_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-4_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-4_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-4_pc.jpg" alt="A painting of a colourful bird sitting on a branch" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Hermann Becker</span>
+              <h3 class="gallery__item__title">Bright bird</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60)</span>
+              <span class="gallery__item__price">$130</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-5_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-5_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-5_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-5_pc.jpg" alt="A painting of two woodpeckers sitting on a tree" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Wolf Bauer</span>
+              <h3 class="gallery__item__title">Woodpeckers</h3>
+              <span class="gallery__item__descr">Paper, acrylic (50x80) </span>
+              <span class="gallery__item__price">$210</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-6_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-6_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-6_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-6_pc.jpg" alt="An abstract painting of a beach town" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Walter Hartmann</span>
+              <h3 class="gallery__item__title">Big Waters</h3>
+              <span class="gallery__item__descr">Paper, acrylic (50x80) </span>
+              <span class="gallery__item__price">$210</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+      </ul>
+    </div>
+    <div class="tabs__content" data-tabs-target="england">
+      <ul class="gallery__list grid list-reset">
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-1_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-1_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-1_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-1_pc.jpg" alt="A painting of a lady in a green coat" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Kurt Werner</span>
+              <h3 class="gallery__item__title">Above the city</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60) </span>
+              <span class="gallery__item__price">$170</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-2_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-2_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-2_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-2_pc.jpg" alt="A painting of chicks" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Max Richter</span>
+              <h3 class="gallery__item__title">The chicks</h3>
+              <span class="gallery__item__descr">Canvas, oil (50x80) </span>
+              <span class="gallery__item__price">$180</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-3_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-3_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-3_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-3_pc.jpg" alt="A painting of a huge bird with black feathers" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Martin Mayer</span>
+              <h3 class="gallery__item__title">Among the leaves</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60)</span>
+              <span class="gallery__item__price">$200</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-4_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-4_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-4_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-4_pc.jpg" alt="A painting of a colourful bird sitting on a branch" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Hermann Becker</span>
+              <h3 class="gallery__item__title">Bright bird</h3>
+              <span class="gallery__item__descr">Colour lithograph (40x60)</span>
+              <span class="gallery__item__price">$130</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-5_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-5_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-5_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-5_pc.jpg" alt="A painting of two woodpeckers sitting on a tree" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Wolf Bauer</span>
+              <h3 class="gallery__item__title">Woodpeckers</h3>
+              <span class="gallery__item__descr">Paper, acrylic (50x80) </span>
+              <span class="gallery__item__price">$210</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <picture>
+              <source srcset="../img/gallery_2-6_phone.jpg" media="(max-width: 480px)">
+              <source srcset="../img/gallery_2-6_small-tab.jpg" media="(max-width: 700px)">
+              <source srcset="../img/gallery_2-6_tab.jpg" media="(max-width: 768px)">
+              <img src="../img/gallery_2-6_pc.jpg" alt="An abstract painting of a beach town" class="gallery__item__img" loading="lazy">
+            </picture>
+            <div class="gallery__item__content">
+              <span class="gallery__item__author">Walter Hartmann</span>
+              <h3 class="gallery__item__title">Big Waters</h3>
+              <span class="gallery__item__descr">Paper, acrylic (50x80) </span>
+              <span class="gallery__item__price">$210</span>
+              <button class="gallery__btn btn btn-reset btn--green">Add to cart</button>
+            </div>
+          </li>
+      </ul>
     </div>
   </div>
 </section>
