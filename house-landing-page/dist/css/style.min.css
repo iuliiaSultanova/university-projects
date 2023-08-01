@@ -221,6 +221,12 @@ body {
 .cart:hover svg {
   stroke: var(--deep-green);
 }
+.cart:active svg {
+  stroke: var(--deep-green);
+}
+.cart:visited svg {
+  stroke: var(--deep-green);
+}
 
 @media (max-width: 576px) {
   .nav {

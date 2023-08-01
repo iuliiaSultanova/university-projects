@@ -70,6 +70,14 @@
   &:hover svg {
     stroke: var(--deep-green);
   }
+
+  &:active svg {
+    stroke: var(--deep-green);
+  }
+
+  &:visited svg {
+    stroke: var(--deep-green);
+  }
 }
 
 .nav {
