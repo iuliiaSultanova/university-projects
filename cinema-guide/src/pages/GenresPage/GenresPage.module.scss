@@ -1,0 +1,37 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.section_title {
+    color: vars.$content-primary;
+    font-size: vars.$font-size-section-title;
+    font-weight: bold;
+    line-height: 56px;
+    margin-bottom: 64px;
+
+    @media screen and (max-width: vars.$mobile) {
+        font-size: vars.$font-size-xl;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+}
+
+.genres_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @media screen and (max-width: vars.$mobile) {
+        justify-content: center;
+        //gap: 24px 0;
+    }
+}
+
+.genres {
+    padding-top: 64px;
+    padding-bottom: 160px;
+    margin: 0 80px 0 80px;
+
+    @media screen and (max-width: vars.$mobile) {
+        margin: 0 20px 0 20px;
+    }
+}

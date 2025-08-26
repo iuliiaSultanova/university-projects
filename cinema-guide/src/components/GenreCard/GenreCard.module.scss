@@ -1,0 +1,57 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.card_container {
+  position: relative;
+  //display: flex;
+  //flex-direction: column;
+  width: 290px;
+  height: 304px;
+  border-radius: 24px;
+  outline: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: white;
+  box-shadow: 0 0 80px #ffffffab;
+  cursor: pointer;
+
+  @media screen and (max-width: vars.$mobile) {
+    width: 335px;
+  }
+}
+
+.genre_name {
+  color: vars.$content-primary;
+  font-size: vars.$font-size-xl;
+  line-height: 32px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.genre_bottom {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  padding: 22px 0 30px 0;
+  background-color: vars.$black;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  bottom: 0;
+  @media screen and (max-width: vars.$mobile) {
+    width: 335px;
+  }
+}
+
+.card_img {
+  object-fit: cover;
+  border-radius: 24px;
+  height: 304px;
+  width: 290px;
+  @media screen and (max-width: vars.$mobile) {
+    width: 335px;
+  }
+}
+
+.genre_link {
+  text-decoration: none;
+  color: inherit;
+}

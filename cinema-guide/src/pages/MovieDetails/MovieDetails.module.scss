@@ -1,0 +1,176 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.movie_facts {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.facts_text {
+  font-size: vars.$font-size-l;
+  line-height: 24px;
+  color: vars.$content-secondary;
+}
+
+.movie_title {
+  color: vars.$content-primary;
+  font-size: vars.$font-size-title;
+  line-height: 56px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.movie_info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.movie_plot {
+  color: vars.$content-secondary;
+  font-size: vars.$font-size-xl;
+  line-height: 32px;
+}
+
+.action_container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+
+  @media screen and (max-width: vars.$mobile) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.banner_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 60px;
+  padding-bottom: 122px;
+  padding-top: 106px;
+
+  @media screen and (max-width: vars.$mobile) {
+    max-width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin: 0 20px;
+  }
+}
+
+.update_icon {
+  width: 20px;
+  height: 20px;
+}
+
+.action_btn {
+  width: 171px;
+}
+
+.update_btn {
+  width: 68px;
+}
+
+.details_page {
+  margin: 0 0 0 80px;
+
+  @media screen and (max-width: vars.$mobile) {
+    margin: 0 0 0 0;
+  }
+}
+
+.details_banner {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: vars.$mobile) {
+    margin-bottom: 32px;
+    flex-direction: column-reverse;
+  }
+}
+
+.details_section {
+  font-size: vars.$font-size-section-title;
+  font-weight: bold;
+  color: vars.$content-primary;
+  line-height: 48px;
+  margin-bottom: 64px;
+
+  @media screen and (max-width: vars.$mobile) {
+    margin-bottom: 40px;
+  }
+}
+
+.details_text {
+  @media screen and (max-width: vars.$mobile) {
+    padding: 0 20px 32px 20px;
+  }
+}
+
+.line_left,
+.line_right {
+  font-size: vars.$font-size-l;
+  color: vars.$content-primary;
+  line-height: 24px;
+  //width: 100%;
+  white-space: nowrap;
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 20vw;
+
+  @media screen and (max-width: vars.$mobile) {
+    width: 100%;
+  }
+}
+
+.text_line {
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-template-areas: "left right";
+  align-items: end;
+  gap: 0 0.25rem;
+}
+
+.line_left {
+  grid-area: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.line_left::after {
+  position: absolute;
+  padding-left: 0.25ch;
+  content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+  text-align: right;
+}
+
+.line_right {
+  grid-area: right;
+}
+
+.dots {
+  flex: 1;
+  position: relative;
+  margin: 0 10px;
+}
+
+.dots:before {
+  content: "........................................................................";
+  display: block;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  color: vars.$content-primary;
+}

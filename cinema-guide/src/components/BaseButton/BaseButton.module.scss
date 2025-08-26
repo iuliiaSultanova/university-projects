@@ -1,0 +1,42 @@
+@use '@/shared/styles/variables.scss' as vars;
+
+.button_base {
+    //width: 100%;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    color: vars.$content-primary;
+    padding: 16px 0;
+    outline: none;
+    border: none;
+    font-size: vars.$font-size-l;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary {
+    background-color: vars.$content-brand-active;
+
+    &:hover {
+        @media (hover: hover) {
+            background-color: vars.$content-brand-disabled;
+            color: vars.$content-disabled;
+        }
+    }
+    
+}
+
+.secondary {
+    background-color: vars.$secondary-background;
+
+    &:hover {
+        @media (hover: hover) {
+            background-color: vars.$background-disabled;
+            color: vars.$content-disabled;
+        }
+    }
+    
+}

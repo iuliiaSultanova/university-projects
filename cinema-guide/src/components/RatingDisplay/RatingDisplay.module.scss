@@ -1,0 +1,58 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.rating_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: vars.$content-primary;
+  border-radius: 16px;
+  min-width: 70px;
+  height: 32px;
+  text-align: center;
+  font-size: vars.$font-size-l;
+  font-weight: bold;
+
+  @media screen and (max-width: vars.$mobile) {
+    width: 47px;
+    height: 32px;
+  }
+}
+
+.small {
+  min-width: 47px;
+  height: 20px;
+  font-size: vars.$font-size-s;
+}
+
+.green {
+  background-color: vars.$rating-good;
+}
+
+.gold {
+  background-color: vars.$rating-top;
+}
+
+.grey {
+  background-color: vars.$rating-average;
+}
+
+.red {
+  background-color: vars.$rating-bad;
+}
+
+.star_icon {
+  width: 16px;
+  height: 16px;
+
+  @media screen and (max-width: vars.$mobile) {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.small .star_icon {
+  width: 10px;
+  height: 10px;
+}

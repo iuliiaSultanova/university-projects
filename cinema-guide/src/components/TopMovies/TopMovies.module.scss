@@ -1,0 +1,36 @@
+@use '@/shared/styles/variables.scss' as vars;
+
+.section_title {
+    font-size: vars.$font-size-section-title;
+    font-weight: bold;
+    color: vars.$content-primary;
+    line-height: 48px;
+    margin-bottom: 64px;
+}
+
+.content_container {
+    margin-top: 40px;
+}
+
+.ten_movies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 120px;
+
+    @media screen and (max-width: vars.$mobile) {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        min-height: 400px;
+        align-items: center;
+    }
+}
+
+.top_movies_section {
+    margin: 0 80px 0 80px;
+
+    @media screen and (max-width: vars.$mobile) {
+        margin: 0 20px 0 20px;
+    }
+}

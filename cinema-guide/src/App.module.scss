@@ -1,0 +1,19 @@
+@use '@/shared/styles/variables.scss' as vars;
+
+html {
+    background-color: vars.$black;
+}
+
+.section_title {
+    color: vars.$content-primary;
+    font-size: vars.$font-size-section-title;
+    font-weight: bold;
+    line-height: 56px;
+    margin-bottom: 64px;
+
+    @media screen and (max-width: vars.$mobile) {
+        font-size: vars.$font-size-xl;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+}

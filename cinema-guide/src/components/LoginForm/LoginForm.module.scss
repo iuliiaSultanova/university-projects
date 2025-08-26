@@ -1,0 +1,64 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.form_email,
+.form_password {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #bebebe;
+  background-color: vars.$white;
+  color: black;
+  width: 340px;
+  padding: 16px 0;
+  background-repeat: no-repeat;
+  background-position: 16px;
+  padding-left: 52px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid vars.$content-active;
+  }
+}
+
+.form_email {
+  background-image: url("/logos/mail.svg");
+}
+
+.form_password {
+  background-image: url("/logos/password.svg");
+}
+
+.inputs_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_form {
+  padding-top: 40px;
+}
+
+.form_register {
+  cursor: pointer;
+  color: black;
+  font-size: vars.$font-size-l;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.error {
+  border: 1px solid vars.$content-error;
+
+  &:hover {
+    border: 1px solid vars.$content-error;;
+  }
+}

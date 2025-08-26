@@ -1,0 +1,18 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search_input {
+  background-color: vars.$secondary-background;
+}

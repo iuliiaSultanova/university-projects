@@ -1,0 +1,55 @@
+@use '@/shared/styles/variables.scss' as vars;
+
+.logo {
+    width: 240px;
+    height: 32px;
+
+    @media screen and (max-width: vars.$mobile) {
+        width: 136px;
+        height: 18px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 80px;
+    justify-content: space-between;
+    padding: 24px 0 24px 0;
+    backdrop-filter: blur(10px);
+
+    @media screen and (max-width: vars.$mobile) {
+        padding: 19px 0 19px 0;
+    }
+}
+
+.header {
+    //position: relative;
+    margin: 0 80px 0 80px;
+    //margin-bottom: 106px;
+    @media screen and (max-width: vars.$mobile) {
+        margin: 0 20px 0 20px;
+    }
+}
+
+.header_pc {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 80px;
+    justify-content: space-between;
+    @media screen and (max-width: vars.$mobile) {
+        display: none;
+    }
+}
+
+.header_mobile {
+    display: none;
+    @media screen and (max-width: vars.$mobile) {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+}

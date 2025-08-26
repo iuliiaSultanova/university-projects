@@ -1,0 +1,69 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.text_left {
+  color: vars.$content-primary;
+  font-weight: bold;
+  font-size: vars.$font-size-l;
+  line-height: 24px;
+}
+
+.text_right {
+  display: flex;
+  font-size: vars.$font-size-l;
+  color: vars.$content-secondary;
+  line-height: 24px;
+  gap: 12px;
+}
+
+.socials img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.socials {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.socials_container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 0 40px 0;
+
+  @media screen and (max-width: vars.$mobile) {
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 32px;
+    margin: 24px 0 24px 0;
+  }
+}
+
+.footer {
+  margin: 0 80px 0 80px;
+  @media screen and (max-width: vars.$mobile) {
+    margin: 0 20px 0 20px;
+  }
+}
+
+.copyright_text {
+  display: flex;
+  gap: 12px;
+  @media screen and (max-width: vars.$mobile) {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,154 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.profile_section {
+  margin: 64px 80px;
+
+  @media screen and (max-width: vars.$mobile) {
+    margin: 24px 20px;
+  }
+}
+
+.btns_container {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+
+  @media screen and (max-width: vars.$mobile) {
+    gap: 24px;
+  }
+}
+
+.tabs_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  color: vars.$content-primary;
+  font-size: 24px;
+  line-height: 32px;
+  padding: 0;
+  padding-bottom: 8px;
+  cursor: pointer;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid vars.$b-border;
+  }
+}
+
+.tabs_content {
+  padding: 64px 0;
+  color: vars.$content-primary;
+
+  @media screen and (max-width: vars.$mobile) {
+    padding: 40px 0;
+  }
+}
+
+.active {
+  border-bottom: 1px solid vars.$b-border;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.info_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  max-width: 60px;
+  height: 60px;
+  background-color: vars.$background-disabled;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  color: vars.$content-primary;
+
+  @media screen and (max-width: vars.$mobile) {
+    min-width: 48px;
+    max-width: 48px;
+    height: 48px;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.settings_list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0 0 64px 0;
+  gap: 40px;
+
+  @media screen and (max-width: vars.$mobile) {
+    padding: 0 0 40px 0;
+  }
+}
+
+.settings_item {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.item_text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.item_label {
+  color: vars.$content-disabled;
+  font-size: vars.$font-size-l;
+
+  @media screen and (max-width: vars.$mobile) {
+    font-size: 14px;
+  }
+}
+
+.btn_text_pc {
+  display: block;
+  color: inherit;
+
+  @media screen and (max-width: vars.$mobile) {
+    display: none;
+  }
+}
+
+.btn_text_sp {
+  display: none;
+
+  @media screen and (max-width: vars.$mobile) {
+    display: block;
+    color: inherit;
+  }
+}
+
+.favs_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 64px 40px;
+
+  @media screen and (max-width: vars.$mobile) {
+    flex-wrap: nowrap;
+  }
+}

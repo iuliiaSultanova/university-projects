@@ -1,0 +1,64 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.search_container {
+  display: flex;
+  align-items: center;
+  background-color: vars.$secondary-background;
+  border-radius: 8px;
+  padding: 0 12px;
+  width: 100%;
+  max-width: 600px; /* Adjust width as needed */
+  height: 48px; /* Height for input */
+  position: relative;
+
+  @media screen and (max-width: vars.$mobile) {
+    position: absolute;
+    right: 0;
+    justify-content: space-between;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 1px solid vars.$content-active;
+  }
+}
+
+.custom_input {
+  //position: relative;
+  outline: none;
+  border: none;
+  height: 48px;
+  width: 600px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: vars.$content-primary;
+  font-size: vars.$font-size-l;
+  //padding: 0 16px 0 48px;
+  cursor: pointer;
+
+  @media screen and (max-width: vars.$mobile) {
+    position: absolute;
+    width: 85%;
+    right: 0;
+    //top: 5px;
+  }
+}
+
+.search_icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px 0 0;
+}
+
+.clear_icon {
+  width: 13px;
+  height: 13px;
+}
+
+.clear_btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

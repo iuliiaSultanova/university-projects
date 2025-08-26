@@ -1,0 +1,23 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.success_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.success_notice {
+    color: black;
+    font-weight: bold;
+    font-size: vars.$font-size-xl;
+    line-height: 32px;
+}
+
+.success_descr {
+    color: black;
+    font-size: vars.$font-size-l;
+    line-height: 24px;
+}

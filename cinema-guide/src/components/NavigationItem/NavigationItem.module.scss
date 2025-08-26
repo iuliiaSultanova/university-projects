@@ -1,0 +1,16 @@
+@use "@/shared/styles/variables.scss" as vars;
+
+.nav_item {
+  display: inline-block;
+  color: vars.$content-primary;
+  font-size: vars.$font-size-xl;
+  padding: 0 0 10px 0;
+  cursor: pointer;
+
+  &:hover, 
+  &:active, 
+  &:focus {
+    border-bottom: 1px solid vars.$b-border;
+  }
+}
+
